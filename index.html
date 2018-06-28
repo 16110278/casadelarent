@@ -1,27 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/normaize.css">
-	<title>Casa De La Rent</title>
+  <meta charset="UTF-8">
+  <title>alquiler de campo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<nav>
+<div class="containerp">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li><a href="#!">three</a></li>
+  </ul>
+
+  <ul id="dropdown11" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li><a href="#!">three</a></li>
+  </ul>
+
+    <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+        <li><a href="sass.html" class="active">Sass 1</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown
+        <i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="badges.html">Components 1</a></li>
+        <li><a href="collapsible.html">Javascript 1</a></li>
+        <li><a href="mobile.html">Mobile 1</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+      <li>
+      	<div class="user-view">
+	        <div class="background">
+	          <img src="http://materializecss.com/images/office.jpg" alt="Background User View">
+	        </div>
+	        <a href="#user"><img class="circle" src="http://materializecss.com/images/yuna.jpg" alt="Avatar User View"></a>
+	        <a href="#name"><span class="white-text name">Pretty Woman</span></a>
+	        <a href="#email"><span class="white-text email">prettywoman@gmail.com</span></a>
+      	</div>
+    	</li>
+        <li><a href="sass.html" class="active">Sass 2</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown11">Dropdown
+        <i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="badges.html">Components 2</a></li>
+        <li><a href="collapsible.html">Javascript 2</a></li>
+        <li><a href="mobile.html">Mobile 2</a></li>
       </ul>
     </div>
   </nav>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
