@@ -24,9 +24,17 @@
 
     <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center">Logo</a>
-      <a href="#" data-activates="slide-out" class="button-collapse show-on-large right"><i class="material-icons">menu</i></a>
-      <ul class="side-nav" id="slide-out">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html" class="active">Sass 1</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown
+        <i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="badges.html">Components 1</a></li>
+        <li><a href="collapsible.html">Javascript 1</a></li>
+        <li><a href="mobile.html">Mobile 1</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
       <li>
       	<div class="user-view">
 	        <div class="background">
@@ -46,6 +54,50 @@
       </ul>
     </div>
   </nav>
+
+<!-- MAIN BODY -->
+<table class="striped highlight responsive-table" style="font-size: 15px;color: black;">
+        <thead>
+          <tr>
+              <th>#</th>
+              <th>Hours</th>
+              <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+      <label>
+        1.
+      </label>
+</td>
+            <td>12.00 PM - 13.00 PM</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td>
+      <label>
+        2.
+      </label>
+            </td>
+            <td>14.00 PM - 15.00 PM</td>
+            <td>In Use</td>
+          </tr>
+          <tr>
+            <td>
+      <label>
+        3.
+      </label>
+            </td>
+            <td>16.00 PM - 17.00 PM</td>
+            <td>Book</td>
+          </tr>
+        </tbody>
+      </table>  
+
+
+
 </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
