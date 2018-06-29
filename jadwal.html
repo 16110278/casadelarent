@@ -5,8 +5,15 @@
   <title>Casa De La Rent</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.css">
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript" src="js/materialize.js"></script>  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 </head>
 <body>
 <div class="containerp">
@@ -56,51 +63,87 @@
   </nav>
 
 <!-- MAIN BODY -->
-<table class="striped highlight responsive-table" style="font-size: 15px;color: black;">
+<fieldset>
+  <legend>SCHEDULE</legend>
+<form id="form1" name="form1" method="post" action="">
+  <h5 style="margin-left: 5px;">SEARCH DATE</h5>
+  <input type="text" class="datepicker" name="datepicker1" id="datepicker" style="width: 20%; cursor: text; margin-left: 5px;"> 
+  <button class="btn waves-effect waves-light" type="submit" name="action" >Submit
+    <i class="material-icons right">send</i>
+  </button><br>
+<span id="dpicker_name"></span>
+</form>
+
+
+<table class="striped highlight responsive-table centered" style="font-size: 15px;color: black;">
         <thead>
           <tr>
               <th>#</th>
               <th>Hours</th>
               <th>Status</th>
-          </tr>
+              <th>Infomation</th>
+              </tr>
         </thead>
 
         <tbody>
           <tr>
             <td>
-      <label>
+      <label style="color: black; font-size: 15px;">
         1.
       </label>
 </td>
             <td>12.00 PM - 13.00 PM</td>
-            <td>Free</td>
+            <td style="background-color: #76ff03;color: black; display: block;">Free</td>
+            <td>-</td>
           </tr>
           <tr>
             <td>
-      <label>
+      <label style="color: black; font-size: 15px;">
         2.
       </label>
             </td>
             <td>14.00 PM - 15.00 PM</td>
-            <td>In Use</td>
+            <td style="background-color: #e53935;color: white; display: block;">In Use</td>
+            <td>Election in Field 1</td>
           </tr>
           <tr>
             <td>
-      <label>
+      <label style="color: black; font-size: 15px;">
         3.
       </label>
             </td>
             <td>16.00 PM - 17.00 PM</td>
-            <td>Book</td>
+            <td style="background-color: #fb8c00;color: white; display: block;">Book</td>
+            <td>Field 2</td>
           </tr>
         </tbody>
       </table>  
-
+</fieldset>
 
 
 </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
   <script src="js/index.js"></script>
+  <script type="text/javascript">
+$('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+  </script>
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    
+  });
+    
+    
+    $(document).ready(function(){
+      $('#datepicker').on('change', function(){
+        var dateThis = $(this).val();
+        $('#dpicker_name').text(dateThis);
+      });
+    });
+  </script>
 </body>
 </html>
