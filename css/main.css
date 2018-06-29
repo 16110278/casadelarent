@@ -29,4 +29,11 @@ body {
     color: black;
 }
 
+.box {
+    color: black;
+    background-color: rgba(225, 225, 225, 0.9);
+    border-radius: 15px;
+    padding: 25px 50px;
+}
+
 
