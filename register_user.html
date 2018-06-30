@@ -63,60 +63,44 @@
 
 <!-- MAIN BODY -->
 <fieldset>
-  <legend>SCHEDULE</legend>
-<form id="form1" name="form1" method="post" action="">
-  <h5 style="margin-left: 5px;">SEARCH DATE</h5>
-  <input type="text" class="datepicker" name="datepicker1" id="datepicker" style="width: 20%; cursor: text; margin-left: 5px;"> 
-  <button class="btn waves-effect waves-light" type="submit" name="action" >Submit
-    <i class="material-icons right">send</i>
-  </button><br>
-<span id="dpicker_name"></span>
-</form>
+  <legend>REGISTRATION</legend>
 
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="First Name" id="first_name" type="text" class="validate" required="required">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate" required="required">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" required="required">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" required="required">
+          <label for="password">Confirm Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" required="required">
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="wrong" data-success="right"></span>
+        </div>
+      </div>
 
-<table class="striped highlight responsive-table centered" style="font-size: 15px;color: black;">
-        <thead>
-          <tr>
-              <th>#</th>
-              <th>Hours</th>
-              <th>Status</th>
-              <th>Infomation</th>
-              </tr>
-        </thead>
+    </form>
+  </div>
 
-        <tbody>
-          <tr>
-            <td>
-      <label style="color: black; font-size: 15px;">
-        1.
-      </label>
-</td>
-            <td>12.00 PM - 13.00 PM</td>
-            <td style="background-color: #76ff03;color: black; display: block;">Free</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>
-      <label style="color: black; font-size: 15px;">
-        2.
-      </label>
-            </td>
-            <td>14.00 PM - 15.00 PM</td>
-            <td style="background-color: #e53935;color: white; display: block;">In Use</td>
-            <td>Election in Field 1</td>
-          </tr>
-          <tr>
-            <td>
-      <label style="color: black; font-size: 15px;">
-        3.
-      </label>
-            </td>
-            <td>16.00 PM - 17.00 PM</td>
-            <td style="background-color: #fb8c00;color: white; display: block;">Book</td>
-            <td>Field 2</td>
-          </tr>
-        </tbody>
-      </table>  
 </fieldset>
 
 
