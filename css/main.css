@@ -78,3 +78,34 @@ body {
 	font-size: 15px;
 	color: black;
 }
+
+.card .card-image .card-badge {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding: 0.2em 24px 0.8em 24px;
+  color: #fff;
+  z-index: 2;
+}
+.card .card-image .card-badge .material-icons {
+  position: relative;
+  margin-right: 8px;
+  top: 7px;
+}
+.card .card-image .card-badge + .card-title {
+  padding-bottom: 66px;
+}
+.card.horizontal .card-image .card-badge {
+  text-align: center;
+  padding: 0.2em 0;
+}
+.card.horizontal .card-image .card-badge .material-icons {
+  display: none;
+}
+
+.card-action {
+  white-space: nowrap;
+}
