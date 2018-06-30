@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="function.js"></script>
 </head>
 <body>
 <div class="containerp">
@@ -62,14 +63,14 @@
   </nav>
 
 <!-- MAIN BODY -->
-<fieldset>
+<fieldset id="fldregus">
   <legend>REGISTRATION</legend>
 
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" id="form_regus" method="post" onsubmit="return checkform(this);" action="profile_user.html">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="First Name" id="first_name" type="text" class="validate" required="required">
+          <input id="first_name" type="text" class="validate" required="required">
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s6">
@@ -78,25 +79,61 @@
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
+  <label style="margin-left: 10px; font-size: 15px;">Gender</label>
+  <select class="browser-default" style="margin-left: 10px; width: 13%;">
+    <option value="" disabled="disabled" selected="selected">Choose your Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+  </div>
+
+      <div class="row">
+        <div class="input-field col s5">
           <input id="password" type="password" class="validate" required="required">
           <label for="password">Password</label>
         </div>
       </div>
-      </div>
       <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate" required="required">
+        <div class="input-field col s5">
+          <input id="confirm_password" type="password" class="validate" required="required">
           <label for="password">Confirm Password</label>
+        </div>      
+      </div>
+            <div class="row">
+              <div class="input-field col s5">
+          <input id="first_name" type="text" class="validate" required="required">
+          <label for="first_name">Phone Number</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s5">
           <input id="email" type="email" class="validate" required="required">
           <label for="email">Email</label>
           <span class="helper-text" data-error="wrong" data-success="right"></span>
         </div>
       </div>
+<div class="row">
+      <!-- START CAPTCHA -->
+<h6 style="margin-left: 10px;">Solve this Captcha</h6>
+<div class="capbox">
+
+<div id="CaptchaDiv"></div>
+
+<div class="capbox-inner">
+Type the above number:<br>
+
+<input type="hidden" id="txtCaptcha">
+<input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+
+</div>
+</div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Register
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+<!-- END CAPTCHA -->
+
+
 
     </form>
   </div>
@@ -128,5 +165,76 @@ $('.datepicker').pickadate({
       });
     });
   </script>
+  <script type="text/javascript">
+      $(document).ready(function() {
+    M.updateTextFields();
+  });
+       
+  </script>
+
+
+ <script type="text/javascript">
+// Captcha Script
+
+function checkform(theform){
+var why = "";
+
+if(theform.CaptchaInput.value == ""){
+why += "- Please Enter CAPTCHA Code.\n";
+}
+if(theform.CaptchaInput.value != ""){
+if(ValidCaptcha(theform.CaptchaInput.value) == false){
+why += "The CAPTCHA Code Does Not Match.\n";
+}
+}
+if(why != ""){
+alert(why);
+return false;
+}
+}
+
+var a = Math.ceil(Math.random() * 9)+ '';
+var b = Math.ceil(Math.random() * 9)+ '';
+var c = Math.ceil(Math.random() * 9)+ '';
+var d = Math.ceil(Math.random() * 9)+ '';
+var e = Math.ceil(Math.random() * 9)+ '';
+
+var code = a + b + c + d + e;
+document.getElementById("txtCaptcha").value = code;
+document.getElementById("CaptchaDiv").innerHTML = code;
+
+// Validate input against the generated number
+function ValidCaptcha(){
+var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+if (str1 == str2){
+return true;
+}else{
+return false;
+}
+}
+
+// Remove the spaces from the entered and generated code
+function removeSpaces(string){
+return string.split(' ').join('');
+}
+</script>
+
+
+<script type="text/javascript">
+  var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
 </body>
 </html>
