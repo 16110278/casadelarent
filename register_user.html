@@ -86,7 +86,12 @@
     <option value="Female">Female</option>
   </select>
   </div>
-
+<div class="row">
+  <div class="input-field col s5">
+  <input type="text" class="datepicker" id="birthpick">
+  <label for="birthpick">Date of birth</label>
+</div>
+</div>
       <div class="row">
         <div class="input-field col s5">
           <input id="password" type="password" class="validate" required="required">
@@ -151,20 +156,7 @@ $('.datepicker').pickadate({
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
   </script>
-  <script>
-  $(function() {
-    $( "#datepicker" ).datepicker();
-    
-  });
-    
-    
-    $(document).ready(function(){
-      $('#datepicker').on('change', function(){
-        var dateThis = $(this).val();
-        $('#dpicker_name').text(dateThis);
-      });
-    });
-  </script>
+
   <script type="text/javascript">
       $(document).ready(function() {
     M.updateTextFields();
