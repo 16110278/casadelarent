@@ -36,7 +36,7 @@
 </nav>
 <ul id="slide-out" class="sidenav">
     <li><div class="user-view">
-      <a href="profile_user.html"><img class="circle" src="http://placehold.it/64"></a>
+      <a href="profile_user.html"><img class="circle" src="64.png"></a>
       <a href="#name"><span class="white-text name">Username</span></a>
       <a href="#email"><span class="white-text email">Email@email.com</span></a>
     </div></li>
@@ -48,43 +48,67 @@
 
 <!-- MAIN BODY -->
 <fieldset id="fldregus">
-  <legend>Profile USER</legend>
+  <legend>Profile USER EDIT</legend>
 
 <div class="row">
-  <div class="col l12 m12 s12">
-    <div class="row">
-      <div class="col s12">
-        <div class="card">
-          <div class="card-image">
-            <img src="http://www.img.lirent.net/2014/10/Android-Lollipop-wallpapers-Download.jpg" alt="" />
-          </div>
-          <div class="card-content">
-            <div class="row">
-              <div class="col s4 profile-pic">
-                <img class="circle responsive-img" src="https://lh3.googleusercontent.com/-W2XryVdi-lA/U6tSAh3SsbI/AAAAAAAAFGY/ZHJiUEcR_Zs/w480-h480/avatar%2Bmaterial%2Bdesign.png" alt="" />
-              </div>
-              <div class="col right controls ">
-                <i class="material-icons" onclick='showMenu()'>more_vert</i>
-              </div>
-              <div class="row-menu">
-                <div class="menu">
-                  <div class="row">
-                    <ul class="menu-list">
-                      <li>Make a call</li>
-                      <li>Text a message</li>
-                      <li>Block </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <span class="card-title black-text">Bruce Banner Wayne</span>
-          </div>
+    <form class="col s12" id="form_regus" method="post" onsubmit="return checkform(this);" action="profile_user.html">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate" required="required">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate" required="required">
+          <label for="last_name">Last Name</label>
         </div>
       </div>
-    </div>
+      <div class="row">
+  <label style="margin-left: 10px; font-size: 15px;">Gender</label>
+  <select class="browser-default" style="margin-left: 10px; width: 13%;">
+    <option value="" disabled="disabled" selected="selected">Choose your Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
   </div>
+<div class="row">
+  <div class="input-field col s5">
+  <input type="text" class="datepicker" id="birthpick">
+  <label for="birthpick">Date of birth</label>
 </div>
+</div>
+      <div class="row">
+        <div class="input-field col s5">
+          <input id="password" type="password" class="validate" required="required">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s5">
+          <input id="confirm_password" type="password" class="validate" required="required">
+          <label for="password">Confirm Password</label>
+        </div>      
+      </div>
+            <div class="row">
+              <div class="input-field col s5">
+          <input id="first_name" type="text" class="validate" required="required">
+          <label for="first_name">Phone Number</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s5">
+          <input id="email" type="email" class="validate" required="required">
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="wrong" data-success="right"></span>
+        </div>
+      </div>
+<div class="row">
+
+  <button class="btn waves-effect waves-light" type="submit" name="action">Update
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+
+
 
 
     </form>
@@ -150,17 +174,7 @@ $(document).ready(function(){
 
 </script>
 
-<script type="text/javascript">
-  function showMenu() {
-  if ($('.menu').css("display") != "none") {
-    $('.menu').css("display", "none");
-  }
-  else{
-     $('.menu').css("display", "block");
-    $('.menu').addClass('animated bounceIn');
-  }
-}
-</script>
+
 </body>
 
 </html>

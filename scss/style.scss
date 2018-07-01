@@ -1,0 +1,46 @@
+$sidenav-bg: #151515;
+$sidenav-color: rgba(255,255,255,0.5);
+$sidenav-divider: rgba(255,255,255,0.2);
+
+.sidenav {
+	background-color: $sidenav-bg;
+	color: $sidenav-color;
+	.subheader {
+		color: $sidenav-color;
+	}
+	.divider {
+		background-color: $sidenav-divider;
+	}
+	li {
+		a {
+			color: $sidenav-color;
+			i.material-icons {
+				color: $sidenav-color;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DEMO STYLES - Not required.
+nav, header, main, footer {padding-left: 300px;} @media only screen and (max-width : 992px) {nav, header, main, footer {padding-left: 0;}}
