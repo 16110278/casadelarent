@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Material Compact Login Animation</title>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <form id="form_login" method="post" onsubmit="return checkform(this);" action="profile_user.html">
+  <div class="materialContainer">
+  <div class="box">
+      <div class="title">Reset Password</div>
+      <div class="input">
+         <label for="name">Username/Email</label>
+         <input type="text" name="name" id="name" required="required" class="validate">
+         <span class="spin"></span>
+      </div>
+
+      <div class="button login">
+         <button><span>GO</span><i class="fa fa-check"></i></button>
+</form>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+<script type="text/javascript">
+  var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+</body>
+</html>
