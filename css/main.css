@@ -110,6 +110,7 @@ nav, header, main, footer {
 .card {
   overflow: visible;
 }
+
 .profile-pic {
   margin-top: -6em;
   z-index: 1;
@@ -142,6 +143,14 @@ nav, header, main, footer {
 .menu-list > li {
   margin-bottom: 1em;
   cursor: pointer;
+}
+
+.menu-list a {
+  color: #555;
+}
+
+.menu-list a:hover {
+  color: tomato;
 }
 
 .menu-list > li:last-child{
