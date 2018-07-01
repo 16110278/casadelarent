@@ -9,29 +9,30 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+      <form id="form_login" method="post" onsubmit="return checkform(this);" action="profile_user.html">
   <div class="materialContainer">
   <div class="box">
       <div class="title">LOGIN</div>
       <div class="input">
          <label for="name">Username</label>
-         <input type="text" name="name" id="name">
+         <input type="text" name="name" id="name" required="required" class="validate">
          <span class="spin"></span>
       </div>
 
       <div class="input">
          <label for="pass">Password</label>
-         <input type="password" name="pass" id="pass">
+         <input type="password" name="pass" id="pass" required="required" class="validate">
          <span class="spin"></span>
       </div>
-
       <div class="button login">
-         <button><span>GO</span> <i class="fa fa-check"></i></button>
+         <button><span>GO</span><i class="fa fa-check"></i></button>
       </div>
 
       <a href="" class="pass-forgot">Forgot your password?</a>
 
    </div>
-
+</form>
+<form id="form_regus" method="post" onsubmit="return checkform(this);" action="profile_user.html">
    <div class="overbox">
       <div class="material-button alt-2"><span class="shape"></span></div>
 
@@ -39,28 +40,29 @@
 
       <div class="input">
          <label for="regname">Username</label>
-         <input type="text" name="regname" id="regname">
+         <input type="text" name="regname" id="regname" required="required" class="validate">
          <span class="spin"></span>
       </div>
 
       <div class="input">
          <label for="regpass">Password</label>
-         <input type="password" name="regpass" id="regpass">
+         <input type="password" name="regpass" id="regpass" required="required" class="validate">
          <span class="spin"></span>
       </div>
 
       <div class="input">
-         <label for="reregpass">Repeat Password</label>
-         <input type="password" name="reregpass" id="reregpass">
-         <span class="spin"></span>
+         <label for="email">Email</label>
+         <input id="email" type="email" class="validate" required="required">
+         <span class="helper-text" data-error="wrong" data-success="right" style="color: white;"></span>
       </div>
-
       <div class="button">
          <button><span>NEXT</span></button>
       </div>
    </div>
 </div>
+</form>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src="js/index.js"></script>
+
 </body>
 </html>
