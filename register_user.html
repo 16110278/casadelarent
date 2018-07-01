@@ -64,7 +64,7 @@
 
 <!-- MAIN BODY -->
 <fieldset id="fldregus">
-  <legend>REGISTRATION</legend>
+  <legend>REGISTRATION NEW USER</legend>
 
 <div class="row">
     <form class="col s12" id="form_regus" method="post" onsubmit="return checkform(this);" action="profile_user.html">
@@ -227,6 +227,11 @@ function validatePassword(){
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
 </script>
 </body>
 </html>
