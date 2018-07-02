@@ -424,14 +424,12 @@ h5 {
   font-weight: 600; }
 
 .button {
-  color: #ffffff;
-  background-color: #24cf5f;
-  padding: 12px 25px;
+  color: #555;
+
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 0;
-  border-radius: 2px;
   outline: 0;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
   transition: all .2s; }
