@@ -36,75 +36,53 @@
 </nav>
 <ul id="slide-out" class="sidenav">
     <li><div class="user-view">
-      <a href="profile_user.html"><img class="circle animated swing" src="avatar.png"></a>
-      <a href="#name"><span class="white-text name">dumdaroca</span></a>
-      <a href="#email"><span class="white-text email">daroca@gomu.com</span></a>
+      <a href="profile_userRENT.html"><img class="circle animated swing" src="ava1.jpg"></a>
+      <a href="index.html"><span class="white-text name">Casa De La Rent</span></a>
+      <a href="#name"><span class="white-text name">fernandezmar</span></a>
+      <a href="#email"><span class="white-text email">maracana@gomu.com</span></a>
     </div></li>
     <li><a href="index.html"><i class="material-icons home">home</i>Home</a></li>
-    <li><a href="jadwal.html"><i class="material-icons date_range">date_range</i>Schedule</a></li>
     <li><div class="divider"></div></li>
     <li><a href="index.html"><i class="material-icons power_settings_new">power_settings_new</i>Log Out</a></li>
   </ul>
 
 <!-- MAIN BODY -->
-<fieldset>
-  <legend>SCHEDULE</legend>
-<form id="form1" name="form1" method="post" action="">
-  <h5 style="margin-left: 5px;">SEARCH DATE</h5>
-  <input type="text" class="datepicker" name="datepicker1" id="datepicker" style="width: 20%; cursor: text; margin-left: 5px;"> 
-  <button class="btn waves-effect waves-light" type="submit" name="action" >Submit
+<fieldset id="fldregus">
+  <legend>Change Password</legend>
+<form id="form_regus" method="post" onsubmit="return checkform(this);" action="profile_userRENT.html">
+  <div class="row">
+        <div class="input-field col s5">
+          <input id="oldpassword" type="password" class="validate" required="required">
+          <label for="oldpassword">Old Password</label>
+        </div>
+      </div>
+
+<div class="row">
+        <div class="input-field col s5">
+          <input id="password" type="password" class="validate" required="required">
+          <label for="password">New Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s5">
+          <input id="confirm_password" type="password" class="validate" required="required">
+          <label for="confirm_password">Confirm New Password</label>
+        </div>      
+      </div>
+<div class="row">
+
+  <button class="btn waves-effect waves-light" type="submit" name="action">Update
     <i class="material-icons right">send</i>
-  </button><br>
-<span id="dpicker_name"></span>
-</form>
+  </button>
+</div>
 
 
-<table class="striped highlight responsive-table centered" style="font-size: 15px;color: black;">
-        <thead>
-          <tr>
-              <th>#</th>
-              <th>Hours</th>
-              <th>Status</th>
-              <th>Infomation</th>
-              </tr>
-        </thead>
 
-        <tbody>
-          <tr>
-            <td>
-      <label style="color: black; font-size: 15px;">
-        1.
-      </label>
-</td>
-            <td>12.00 PM - 13.00 PM</td>
-            <td style="background-color: #76ff03;color: black; display: block;">Free</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>
-      <label style="color: black; font-size: 15px;">
-        2.
-      </label>
-            </td>
-            <td>14.00 PM - 15.00 PM</td>
-            <td style="background-color: #e53935;color: white; display: block;">In Use</td>
-            <td>Election in Field 1</td>
-          </tr>
-          <tr>
-            <td>
-      <label style="color: black; font-size: 15px;">
-        3.
-      </label>
-            </td>
-            <td>16.00 PM - 17.00 PM</td>
-            <td style="background-color: #fb8c00;color: white; display: block;">Book</td>
-            <td>Field 2</td>
-          </tr>
-        </tbody>
-      </table>  
+
+    </form>
+  </div>
+
 </fieldset>
-
-
 
 
 </div>
@@ -122,20 +100,38 @@ $('.datepicker').pickadate({
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
   </script>
-  <script>
-  $(function() {
-    $( "#datepicker" ).datepicker();
-    
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+    M.updateTextFields();
   });
-    
-    
-    $(document).ready(function(){
-      $('#datepicker').on('change', function(){
-        var dateThis = $(this).val();
-        $('#dpicker_name').text(dateThis);
-      });
-    });
+       
   </script>
+
+
+ 
+
+
+<script type="text/javascript">
+  var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
