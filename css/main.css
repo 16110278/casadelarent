@@ -79,9 +79,6 @@ body {
   white-space: nowrap;
 }
 
-<<<<<<< HEAD
-=======
-
 .sidenav {
   background-color: #151515;
   color: rgba(255, 255, 255, 0.5);
@@ -99,15 +96,6 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
-nav, header, main, footer {
-  padding-left: 300px;
-}
-
-@media only screen and (max-width: 992px) {
-  nav, header, main, footer {
-    padding-left: 0;
-  }
-}
 
 .card {
   overflow: visible;
@@ -158,4 +146,5 @@ nav, header, main, footer {
 .menu-list > li:last-child{
    margin-bottom: -1em;
 }
->>>>>>> 1bc23051e77d768e829b748330cfaa5e9e5732fb
+
+
