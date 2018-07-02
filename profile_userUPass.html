@@ -48,67 +48,26 @@
 
 <!-- MAIN BODY -->
 <fieldset id="fldregus">
-  <legend>Profile USER EDIT</legend>
+  <legend>Change Password</legend>
+<form id="form_regus" method="post" onsubmit="return checkform(this);" action="profile_user.html">
+  <div class="row">
+        <div class="input-field col s5">
+          <input id="oldpassword" type="password" class="validate" required="required">
+          <label for="oldpassword">Old Password</label>
+        </div>
+      </div>
 
 <div class="row">
-    <form class="col s12" id="form_regus" method="post" onsubmit="return checkform(this);" action="profile_user.html">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" value="Dummy Edward">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" value="Da roca">
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-  <label style="margin-left: 10px; font-size: 15px;">Gender</label>
-  <select class="browser-default" style="margin-left: 10px; width: 13%;">
-    <option value="" disabled="disabled">Choose your Gender</option>
-    <option value="Male" selected="selected">Male</option>
-    <option value="Female">Female</option>
-  </select>
-  </div>
-<div class="row">
-  <div class="input-field col s5">
-  <input type="text" class="datepicker" id="birthpick">
-  <label for="birthpick">Date of birth</label>
-</div>
-</div>
-      <div class="row" style="margin-left: 0.5%;">
-        <span style="vertical-align: top;">Avatar :</span>
-        <img class="responsive-img" id="blah" src="avatar.png" alt="" width="100px" height="100px" />
-              
-       <br>
-       <section>
-       <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-       </section>
-      </div>
-          <div class="row"">
-          <div class="input-field col s5">
-          <input id="bious" type="text" class="validate" value="I love my Family, ARENA FUTSAL OWNER">
-          <label for="bious">Bio</label>
-        </div>
-      </div>
-            <div class="row"">
-              <div class="input-field col s5">
-          <input id="phonenum" type="text" class="validate" value="081547425254">
-          <label for="phonenum">Phone Number</label>
+        <div class="input-field col s5">
+          <input id="password" type="password" class="validate" required="required">
+          <label for="password">New Password</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s5">
-          <input id="email" type="email" class="validate" value="daroca@gomu.com">
-          <label for="email">Email</label>
-          <span class="helper-text" data-error="wrong" data-success="right"></span>
-        </div>
-      </div>
-          <div class="row"">
-          <div class="input-field col s5">
-          <input id="addressfld" type="text" class="validate" value="Jl. Raya Klp. Dua, Entrop, Jayapura Sel., Kota Jayapura, Papua 99221">
-          <label for="addressfld">Address Field</label>
-        </div>
+          <input id="confirm_password" type="password" class="validate" required="required">
+          <label for="confirm_password">Confirm New Password</label>
+        </div>      
       </div>
 <div class="row">
 
