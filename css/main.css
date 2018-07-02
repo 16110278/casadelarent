@@ -11,7 +11,7 @@
 }
 
 body {
-	background-color: #e5e5e5;
+	background-color: #fcfcfc;
 	color: #555;
 	font-family: 'Roboto', sans-serif;
 }
@@ -147,4 +147,11 @@ body {
    margin-bottom: -1em;
 }
 
+.carousel{
+    height: 300px;
+}
+
+.parallax-container {
+    height: 400px;
+}
 
