@@ -133,6 +133,7 @@ $(document).ready(function(){
   $('.parallax').parallax();
   $('select').material_select();
   $('.carousel').carousel(); 
+  $('.tooltipped').tooltip();
   $(".button-collapse").sideNav({
   	edge: 'right'
   });  
