@@ -3,32 +3,45 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Material Compact Login Animation</title>
+  <title>LOGIN - Casa De La Rent</title>
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
   <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext'>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.css">
+
 </head>
 <body>
       <form id="form_login" method="post" onsubmit="return checkform(this);" action="profile_user.html">
   <div class="materialContainer">
   <div class="box">
-      <div class="title">LOGIN</div>
+      <div class="title">Register</div>
       <div class="input">
          <label for="name">Username</label>
          <input type="text" name="name" id="name" required="required" class="validate">
-         <span class="spin"></span>
+         
       </div>
 
-      <div class="input">
+      <div class="input" >
          <label for="pass">Password</label>
-         <input type="password" name="pass" id="pass" required="required" class="validate">
-         <span class="spin"></span>
+         <input type="password" name="pass" id="pass" required="required" class="validate"> 
       </div>
+            <div class="input">
+         <label for="email">Email</label>
+         <input id="email" type="email" class="validate" required="required">
+         <span class="helper-text" data-error="wrong" data-success="right" style="color: white;"></span>
+      </div>
+      
+    <select class="browser-default" style=" width: 100%;margin-top: 20px; height: 50px;border: 0;outline: 0;box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);">
+    <option value="" disabled="disabled" selected="selected">Choose User Type</option>
+    <option value="Tenant">Tenant user</option>
+    <option value="Female">Normal user</option>
+  </select>
+  
       <div class="button login">
-         <button><span>GO</span><i class="fa fa-check"></i></button>
+         <button><span>Register</span><i class="fa fa-check"></i></button>
       </div>
 
-      <a href="loginForgotpass.html" class="pass-forgot">Forgot your password?</a>
+      
 
    </div>
 </form>
@@ -36,7 +49,7 @@
    <div class="overbox">
       <div class="material-button alt-2"><span class="shape"></span></div>
 
-      <div class="title">REGISTER</div>
+      <div class="title">LOGIN</div>
 
       <div class="input">
          <label for="regname">Username</label>
@@ -49,15 +62,15 @@
          <input type="password" name="regpass" id="regpass" required="required" class="validate">
          <span class="spin"></span>
       </div>
-
-      <div class="input">
-         <label for="email">Email</label>
-         <input id="email" type="email" class="validate" required="required">
-         <span class="helper-text" data-error="wrong" data-success="right" style="color: white;"></span>
-      </div>
+  
       <div class="button">
-         <button><span>NEXT</span></button>
+         <button><span>GO</span></button>
       </div>
+      <div class="title" ">
+
+        <a href="loginForgotpass.html" class="pass-forgot" style="color: white; margin-left: 5%; opacity: 1;">Forgot your password?</a>
+      </div>
+     
    </div>
 </div>
 </form>
