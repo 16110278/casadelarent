@@ -2,6 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>Casa De La Rent</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
@@ -45,16 +46,14 @@
         <li>
         	<div class="user-view">
   	        <div class="background">
-  	          <img src="http://materializecss.com/images/office.jpg" alt="Background User View">
+  	          <img class="responsive-img" src="image6.jpg" alt="Background User View">
   	        </div>
-  	        <a href="#user"><img class="circle" src="http://materializecss.com/images/yuna.jpg" alt="Avatar User View"></a>
-  	        <a href="#name"><span class="white-text name">Pretty Woman</span></a>
-  	        <a href="#email"><span class="white-text email">prettywoman@gmail.com</span></a>
+  	        <a href="#user"><img class="circle" src="avatar.png" alt="Avatar User View"></a>
+  	        <a href="#name"><span class="white-text name">Tri Sulestiyawan</span></a>
+  	        <a href="#email"><span class="white-text email">tsicecold@gmail.com</span></a>
         	</div>
       	</li>
           <li><a href="sass.html" class="active">Sass 2</a></li>
-          <li><>Dropdown
-          <i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="badges.html">Components 2</a></li>
           <li><a href="collapsible.html">Javascript 2</a></li>
           <li><a href="mobile.html">Mobile 2</a></li>
@@ -66,22 +65,17 @@
   <div class="parallax-container center valign-wrapper">
   <div class="container">
     <div class="row">
-      <div class="white-text">
-        <h1>Casa de la rent</h1>
-        <div class="card white">
+        <h1 style="color: white;">Casa de la rent</h1>
+        <div class="card white col s12">
           <div class="card-content grey-text">
             <div class="row">
               <div class="input-field col s3">
               <input id="last_name" type="text" class="validate">
               <label for="last_name">Lokasi</label>
               </div>
-              <div class="input-field col s3">                
-              <select multiple>
-                <option value="" disabled selected>-Pilih Lapangan-</option>
-                <option value="1">Futsal</option>
-                <option value="2">Badminton</option>
-                <option value="3">Basket</option>
-              </select>
+              <div class="input-field col s3">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Lapangan</label>
               </div>
               <div class="input-field col s3">
               <input id="last_name" type="text" class="validate">
@@ -97,7 +91,6 @@
             </button>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <div class="parallax">
