@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", function(){
+  $('.preloader-background').delay(1700).fadeOut('slow');
+  
+  $('.preloader-wrapper')
+    .delay(1700)
+    .fadeOut();
+});
+
+
 $(function() {
 
    $(".input input").focus(function() {
@@ -118,6 +127,7 @@ $(function() {
 
 });
 
+
 $(document).ready(function(){
   $(".dropdown-button").dropdown();
   $('.parallax').parallax();
@@ -127,4 +137,5 @@ $(document).ready(function(){
   	edge: 'right'
   });  
 }) 
+
 
