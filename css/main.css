@@ -19,15 +19,15 @@
 .navbar-fixed { z-index: 9999; }
 
 * {
-	margin: 0;
-	border: 0;
-	padding: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 body {
-	background-color: #fcfcfc;
-	color: #555;
-	font-family: 'Roboto', sans-serif;
+    background-color: #fcfcfc;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -54,14 +54,14 @@ body {
 
 
 #form_regus label {
-	color: black;
+    color: black;
 }
 
 
 #fldregus {
-	font-family: "Ubuntu Condensed", sans-serif;
-	font-size: 15px;
-	color: black;
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-size: 15px;
+    color: black;
 }
 
 .card .card-image .card-badge {
@@ -171,32 +171,3 @@ body {
     height: 400px;
 }
 
-        .pb-cmnt-container {
-        font-family: Lato;
-        margin-top: 100px;
-    }
-
-    .pb-cmnt-textarea {
-        resize: none;
-        padding: 20px;
-        height: 130px;
-        width: 100%;
-        border: 1px solid #F2F2F2;
-    }
-
-.img-rounded{
-  height: 50px;
-  width: 50px;
-}
-.card-inner{
-    margin-left: 4rem;
-}
-.text-center{
-  font-size: 2em;
-}
-.text-secondary-text-center{
-  font-size: 1em;
-}
-footer li a{
-  color: white;
-}
