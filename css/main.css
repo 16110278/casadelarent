@@ -197,3 +197,6 @@ body {
 .text-secondary-text-center{
   font-size: 1em;
 }
+footer li a{
+  color: white;
+}
