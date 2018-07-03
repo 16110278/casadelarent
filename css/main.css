@@ -171,3 +171,32 @@ body {
     height: 400px;
 }
 
+        .pb-cmnt-container {
+        font-family: Lato;
+        margin-top: 100px;
+    }
+
+    .pb-cmnt-textarea {
+        resize: none;
+        padding: 20px;
+        height: 130px;
+        width: 100%;
+        border: 1px solid #F2F2F2;
+    }
+
+.img-rounded{
+  height: 50px;
+  width: 50px;
+}
+.card-inner{
+    margin-left: 4rem;
+}
+.text-center{
+  font-size: 2em;
+}
+.text-secondary-text-center{
+  font-size: 1em;
+}
+footer li a{
+  color: white;
+}
