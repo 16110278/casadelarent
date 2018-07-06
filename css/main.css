@@ -168,8 +168,9 @@ body {
 }
 
 .parallax-container {
-    height: 400px;
+    height: 400px;  
 }
+.content1 {background: #fff}
 
 
 
