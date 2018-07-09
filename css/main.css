@@ -310,3 +310,14 @@ form.formit .button_submit {
     font-weight: 300;
     padding-left: 45px;
 }
+
+
+#rpanel {
+  width: 400px;
+  height: 500px;
+  background: #fff;
+  position: absolute;
+  top: 300px;
+  overflow-y: scroll;
+}
+
