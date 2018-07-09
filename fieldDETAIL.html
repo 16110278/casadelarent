@@ -18,8 +18,8 @@
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
       <script src="function.js"></script>
-      <link rel="shortcut icon" href="logo.png" />
       <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+      <link rel="shortcut icon" href="logo.png" />
   
 </head>
 
@@ -58,7 +58,7 @@
         
       </div>
     </nav>
-    <ul id="slide-out" class="sidenav">
+<ul id="slide-out" class="sidenav">
     <li><div class="user-view">
       <a href="profile_userRENT.html"><img class="circle animated swing" src="jess.jpg"></a>
       <a href="index.html"><span class="white-text name">Casa De La Rent</span></a>
@@ -69,92 +69,82 @@
     <li><div class="divider"></div></li>
     <li><a href="index.html"><i class="material-icons power_settings_new">power_settings_new</i>Log Out</a></li>
   </ul>
+
   </div>
-
-
-
 <!-- MAIN BODY -->
-<fieldset id="fldregus">
-  <legend>Profile USER EDIT</legend>
+<fieldset>
+  <legend>FIELD DETAIL</legend>
 
-<div class="row">
-    <form class="col s12" id="form_regus" method="post" onsubmit="return checkform(this);" action="profile_userRENT.html">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" value="Maracana">
-          <label for="first_name">First Name</label>
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="image5.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" value="Fernandez">
-          <label for="last_name">Last Name</label>
+      </li>
+      <li>
+        <img src="image4.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
-      </div>
-        <div class="row">
-        <div class="input-field col s5">
-          <input id="username" type="text" class="validate" value="fernandezmar">
-          <label for="username">Username</label>
+      </li>
+      <li>
+        <img src="imguser.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
+      </li>
+      <li>
+        <img src="image1.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
-      <div class="row">
-  <label style="margin-left: 10px; font-size: 15px;">Gender</label>
-  <select class="browser-default" style="margin-left: 10px; width: 13%;">
-    <option value="" disabled="disabled">Choose your Gender</option>
-    <option value="Male" selected="selected">Male</option>
-    <option value="Female">Female</option>
-  </select>
+      </li>
+    </ul>
   </div>
+
+  <br>
 <div class="row">
-  <div class="input-field col s5">
-  <input type="text" class="datepicker" id="birthpick" value="May 13, 1998">
-  <label for="birthpick">Date of birth</label>
-</div>
-</div>
-      <div class="row" style="margin-left: 0.5%;">
-        <span style="vertical-align: top;">Avatar :</span>
-        <img class="responsive-img" id="blah" src="jess.jpg" alt="" width="100px" height="100px" />
-              
-       <br>
-       <section>
-       <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-       </section>
-      </div>
-          <div class="row"">
-          <div class="input-field col s5">
-          <input id="bious" type="text" class="validate" value="Loving husband, Father of 2 daughter">
-          <label for="bious">Bio</label>
-        </div>
-      </div>
-            <div class="row"">
-              <div class="input-field col s5">
-          <input id="phonenum" type="text" class="validate" value="081547425255">
-          <label for="phonenum">Phone Number</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s5">
-          <input id="email" type="email" class="validate" value="maracana@gomu.com">
-          <label for="email">Email</label>
-          <span class="helper-text" data-error="wrong" data-success="right"></span>
-        </div>
-      </div>
-
-<div class="row">
-
-  <button class="btn waves-effect waves-light" type="submit" name="action">Update
-    <i class="material-icons right">send</i>
-  </button>
+  <div class="col s6">
+  <h4>ARENA FUTSAL</h4>
+  <br>
+  <span>Description</span><br>
+  <label style="font-size: 15px; color: black;">
+    ARENA Futsal, dengan ukuran lapangan 50x40KM.. dengan harga sewa perjam 100rb.<br>
+   Alamat Jl. Raya Klp. Dua, Entrop, Jayapura Sel., Kota Jayapura, Papua 99221
+  </label>
+    <br>
+    <br>
+  <span>Contact</span><br>
+  <label style="font-size: 15px; color: black;">
+    <a href="profile_userRENT.html">Dummy Edward Da roca</a>
+  </label>
 </div>
 
-
-
-
-    </form>
+<div class="col s6">
+  <div class="container">
+          <div class="row">
+        <div class="input-field col s12">
+          <input value="Name" id="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+      </div>
   </div>
+</div>
+
+</div>
 
 </fieldset>
 
 
-</div>
+
+
+
 
 
 
@@ -169,38 +159,20 @@ $('.datepicker').pickadate({
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
   </script>
-
-  <script type="text/javascript">
-      $(document).ready(function() {
-    M.updateTextFields();
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    
   });
-       
-  </script>
-
-
- 
-
-
-<script type="text/javascript">
-  var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
-
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
-</script>
-<script type="text/javascript">
+    
+    
     $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-</script>
+      $('#datepicker').on('change', function(){
+        var dateThis = $(this).val();
+        $('#dpicker_name').text(dateThis);
+      });
+    });
+  </script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -211,7 +183,12 @@ $(document).ready(function(){
 
 </script>
 
-
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.slider').slider();
+  });
+      
+</script>
 </body>
 
 </html>
