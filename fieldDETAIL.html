@@ -53,7 +53,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a class="green-text text-darken-1 tooltipped" data-position="bottom" data-tooltip="Home" href="index.html"><i class="material-icons">home</i></a></li>
         <li><a class="green-text text-darken-1 tooltipped" data-position="bottom" data-tooltip="Contact" href="contact.html"><i class="material-icons">contact_phone</i></a></li>
-        <li><a class="dropdown-button tooltipped" data-position="bottom" data-tooltip="Profile" href="#!" data-activates="dropdown11"><i class="material-icons green-text text-darken-1">account_circle</i></a></li>
+        <li><a class="dropdown-button tooltipped" data-position="bottom" data-tooltip="Profile" href="profile_userRENT.html" data-activates="dropdown11"><i class="material-icons green-text text-darken-1">account_circle</i></a></li>
       </ul>
         
       </div>
@@ -80,29 +80,29 @@
       <li>
         <img src="image5.jpg"> <!-- random image -->
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>FIELD</h3>
+          <h5 class="light grey-text text-lighten-3">We have 2 big FIELD in our Arena Futsal</h5>
         </div>
       </li>
       <li>
         <img src="image4.jpg"> <!-- random image -->
         <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>Field 1</h3>
+          <h5 class="light grey-text text-lighten-3">Field 1</h5>
         </div>
       </li>
       <li>
-        <img src="imguser.jpg"> <!-- random image -->
+        <img src="image3.jpg"> <!-- random image -->
         <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>Field 2</h3>
+          <h5 class="light grey-text text-lighten-3">Field 2</h5>
         </div>
       </li>
       <li>
         <img src="image1.jpg"> <!-- random image -->
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>Soccer Ball</h3>
+          <h5 class="light grey-text text-lighten-3">We have a good and newest Soccer Balls</h5>
         </div>
       </li>
     </ul>
@@ -122,20 +122,64 @@
     <br>
   <span>Contact</span><br>
   <label style="font-size: 15px; color: black;">
-    <a href="profile_userRENT.html">Dummy Edward Da roca</a>
+    <a href="profile_userVisited.html">Dummy Edward Da roca</a>
   </label>
 </div>
 
+<form method="post" action="#" onsubmit="return checkform(this);"
+>
 <div class="col s6">
+  <h4 style="padding-left: 14.3%;">Booking</h4>
+  <br>
   <div class="container">
-          <div class="row">
+       <div class="row">
         <div class="input-field col s12">
-          <input value="Name" id="name" type="text" class="validate">
-          <label for="name">Name</label>
+          <input value="" id="namex" type="text" class="validate" required="required">
+          <label for="namex">Name</label>
         </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" required="required">
+          <label for="email">Email</label>
+        </div>
+      </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input value="" id="phonex" type="text" class="validate" required="required">
+          <label for="phonex">Phone</label>
+        </div>
+      </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input value="" id="notex" type="text" class="validate" required="required">
+          <label for="notex">Note</label>
+        </div>
+      </div>
+      <div class="row">
+        <!-- START CAPTCHA -->
+<div class="capbox" style="margin-left: 2%;">
+
+<div id="CaptchaDiv"></div>
+
+<div class="capbox-inner">
+Type the above number:<br>
+
+<input type="hidden" id="txtCaptcha">
+<input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+
+</div>
+</div>
+<br><br>
+<button class="btn waves-effect waves-light" type="submit" name="action" style="margin-left: 2%;" >BOOK
+    <i class="material-icons right">send</i>
+  </button>
+<!-- END CAPTCHA -->
+
       </div>
   </div>
 </div>
+</form>
 
 </div>
 
@@ -189,6 +233,56 @@ $(document).ready(function(){
   });
       
 </script>
+
+<script type="text/javascript">
+
+// Captcha Script
+
+function checkform(theform){
+var why = "";
+
+if(theform.CaptchaInput.value == ""){
+why += "- Please Enter CAPTCHA Code.\n";
+}
+if(theform.CaptchaInput.value != ""){
+if(ValidCaptcha(theform.CaptchaInput.value) == false){
+why += "- The CAPTCHA Code Does Not Match.\n";
+}
+}
+if(why != ""){
+alert(why);
+return false;
+}
+}
+
+var a = Math.ceil(Math.random() * 9)+ '';
+var b = Math.ceil(Math.random() * 9)+ '';
+var c = Math.ceil(Math.random() * 9)+ '';
+var d = Math.ceil(Math.random() * 9)+ '';
+var e = Math.ceil(Math.random() * 9)+ '';
+
+var code = a + b + c + d + e;
+document.getElementById("txtCaptcha").value = code;
+document.getElementById("CaptchaDiv").innerHTML = code;
+
+// Validate input against the generated number
+function ValidCaptcha(){
+var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+if (str1 == str2){
+return true;
+}else{
+return false;
+}
+}
+
+// Remove the spaces from the entered and generated code
+function removeSpaces(string){
+return string.split(' ').join('');
+}
+</script>
+
+
 </body>
 
 </html>
