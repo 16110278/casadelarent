@@ -344,3 +344,13 @@ form.formit .button_submit {
   }
 
 #CaptchaInput { margin: 1px 0px 1px 0px; width: 135px; }
+
+
+#rpanel {
+  width: 400px;
+  height: 500px;
+  background: #fff;
+  position: absolute;
+  top: 300px;
+  overflow-y: scroll;
+}
