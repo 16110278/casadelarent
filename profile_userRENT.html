@@ -17,6 +17,8 @@
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
       <script src="function.js"></script>
+      <link rel="shortcut icon" href="logo.png" />
+      <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
       <style>
    #Gallery img {
   width: 29%;
@@ -30,18 +32,42 @@
 
 <body>
 
-  <nav>
-  <div class="nav-wrapper">
-    <div class="row">
-      <div class="col s12">
-        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
-        <a href="#!" target="_blank" class="brand-logo">Casa De La Rent</a>
-       
+   <div class="preloader-background">
+  <div class="preloader-wrapper big active">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
       </div>
     </div>
   </div>
-</nav>
-<ul id="slide-out" class="sidenav">
+</div>
+<ul id="dropdown11" class="dropdown-content">
+    <li><a href="#!">Login</a></li>
+    <li><a href="#!">Signup</a></li>
+  </ul>
+
+
+  <div class="navbar-fixed">
+    <nav class="white">
+    <div class="container nav-wrapper">
+      <a href="index.html"><img src="logo.png" class="z-depth-3"></a>
+      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons green-text text-darken-1">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="green-text text-darken-1 tooltipped" data-position="bottom" data-tooltip="Home" href="index.html"><i class="material-icons">home</i></a></li>
+        <li><a class="green-text text-darken-1 tooltipped" data-position="bottom" data-tooltip="Contact" href="contact.html"><i class="material-icons">contact_phone</i></a></li>
+        <li><a class="dropdown-button tooltipped" data-position="bottom" data-tooltip="Profile" href="#!" data-activates="dropdown11"><i class="material-icons green-text text-darken-1">account_circle</i></a></li>
+
+      </ul>
+        
+      </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
     <li><div class="user-view">
       <a href="profile_userRENT.html"><img class="circle animated swing" src="ava1.jpg"></a>
       <a href="index.html"><span class="white-text name">Casa De La Rent</span></a>
@@ -52,6 +78,7 @@
     <li><div class="divider"></div></li>
     <li><a href="index.html"><i class="material-icons power_settings_new">power_settings_new</i>Log Out</a></li>
   </ul>
+  </div>
 
 <!-- MAIN BODY -->
 <fieldset id="fldregus">
