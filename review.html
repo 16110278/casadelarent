@@ -1,99 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Casa De La Rent</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="shortcut icon" href="logo.png" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<div class="review">
-<span class="heading">User Rating</span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<p>4.1 average based on 254 reviews.</p>
-<hr style="border:3px solid #f1f1f1">
 
+  <div class="preloader-background">
+  <div class="preloader-wrapper big active">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <ul id="dropdown11" class="dropdown-content">
+    <li><a href="login.html">Login</a></li>
+    <li><a href="#!">Signup</a></li>
+  </ul>
+
+  <div class="navbar-fixed">
+    <nav class="white">
+    <div class="container nav-wrapper">
+      <a href="index.html"><img src="logo.png" class="z-depth-3"></a>
+      <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons green-text text-darken-1">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="green-text text-darken-1 tooltipped" data-position="bottom" data-tooltip="Home" href="index.html"><i class="material-icons">home</i></a></li>
+        <li><a class="green-text text-darken-1 tooltipped" data-position="bottom" data-tooltip="Contact" href="contact.html"><i class="material-icons">contact_phone</i></a></li>
+        <li><a class="dropdown-button tooltipped" data-position="bottom" data-tooltip="Profile" href="profil_user.html" data-activates="dropdown11"><i class="material-icons green-text text-darken-1">account_circle</i></a></li>
+        <a class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position="right" data-tooltip="Pasang iklan" href="pasangiklan.html"><i class="material-icons">add</i></a>
+      </ul>
+        <ul class="side-nav" id="slide-out">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img class="responsive-img" src="image6.jpg" alt="Background User View">
+            </div>
+            <a href="#user"><img class="circle" src="avatar.png" alt="Avatar User View"></a>
+            <a href="#name"><span class="white-text name">Tri Sulestiyawan</span></a>
+            <a href="#email"><span class="white-text email">tsicecold@gmail.com</span></a>
+          </div>
+        </li>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Setting Profile</a></li>
+          <li><a href="#">Pasang iklan</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
 <div class="row">
-  <div class="side">
-    <div>5 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-5"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>150</div>
-  </div>
-  <div class="side">
-    <div>4 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-4"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>63</div>
-  </div>
-  <div class="side">
-    <div>3 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-3"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>15</div>
-  </div>
-  <div class="side">
-    <div>2 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-2"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>6</div>
-  </div>
-  <div class="side">
-    <div>1 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-1"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>20</div>
-  </div>
-</div>
+  <div class="col s12">
+    
+    <h3>User Rating</h3>
+    <hr>
+<div class="skillbar clearfix " data-percent="90%">
+  <div class="skillbar-title" style="background: #d35400;"><span>5 Stars</span></div>
+  <div class="skillbar-bar" style="background: #e67e22;"></div>
+  <div class="skill-bar-percent">90%</div>
+</div> <!-- End Skill Bar -->
 
-<div class="center">
-	<h2>Review Highlight</h2>
+<div class="skillbar clearfix " data-percent="88%">
+  <div class="skillbar-title" style="background: #2980b9;"><span>4 Stars</span></div>
+  <div class="skillbar-bar" style="background: #3498db;"></div>
+  <div class="skill-bar-percent">88%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="34%">
+  <div class="skillbar-title" style="background: #268c01;"><span>3 Stars</span></div>
+  <div class="skillbar-bar" style="background: #2ba001;"></div>
+  <div class="skill-bar-percent">34%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="20%">
+  <div class="skillbar-title" style="background: #46465e;"><span>2 Stars</span></div>
+  <div class="skillbar-bar" style="background: #5a68a5;"></div>
+  <div class="skill-bar-percent">20%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="15%">
+  <div class="skillbar-title" style="background: #333333;"><span>1 Star</span></div>
+  <div class="skillbar-bar" style="background: #525252;"></div>
+  <div class="skill-bar-percent">15%</div>
+</div> <!-- End Skill Bar -->
+  </div>
+
+  <div class="col s12">
+    <label style="color: #555; font-size: 15px;">4.5 average based on 300 reviews.</label>
+  </div>
 </div>
-<div class="container">
+<div class="row">
+  <div class="col s12">
+    <h3>Recent Review</h3>
+<div class="containerF">
   <img src="avatar.png" alt="Avatar" style="width:90px; height: 90px">
-  <p><span>Chris Fox.</span> 20 minutes ago</p><br>
+  <p><span>Chris Fox.</span> 55 seconds ago</p><br>
   <p>Casa de Larent very usefull.</p>
 </div>
-
-<div class="container">
+<div class="containerF">
   <img src="imguser.jpg" alt="Avatar" style="width:90px; height: 90px">
   <p><span >Bobby.</span> 5 hours ago</p><br>
   <p>No one is better than Casa de Larent.</p>
 </div>
-<div class="container">
+<div class="containerF">
   <img src="vector.png" alt="Avatar" style="width:90px; height: 90px">
-  <p><span >Jhon Doe</span> 5 days ago</p><br>
+  <p><span >Jhon Doe</span> 1 days ago</p><br>
   <p>Excellent, simple and easy!</p>
 </div>
+<div class="containerF">
+  <img src="jess.jpg" alt="Avatar" style="width:90px; height: 90px">
+  <p><span >Jhon Doe</span> 1 week ago</p><br>
+  <p>I give u 2stars cuz, this website so laaaaameeee !! #TikTokBetter</p>
 </div>
+  </div>
+</div>
+
+<footer class="page-footer" style="background-color: #26a526;">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">_Casadelarent_</h5>
+                <p class="grey-text text-lighten-4">Jl.Kamboja V no 147 Condong Catur, Sleman, Yogyakrta</p>
+                <p class="grey-text text-lighten-4"></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">About</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="contact.html">Contact</a></li>
+                  <li><a class="grey-text text-lighten-3" href="review.html">Review</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright" style="color: #26a526; background-color: #fcfcfc;">
+            <div class="container">
+            © 2018 Copyright Casadelarent
+                       <a class="text-lighten-4 right" href="index.html">Casadelarent.com</a>
+            </div>
+          </div>
+        </footer>            
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+  <script src="js/index.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+  jQuery('.skillbar').each(function(){
+    jQuery(this).find('.skillbar-bar').animate({
+      width:jQuery(this).attr('data-percent')
+    },6000);
+  });
+});
+  </script>
 </body>
 </html>
