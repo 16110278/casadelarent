@@ -135,6 +135,7 @@ $(document).ready(function(){
   $('.carousel').carousel(); 
   $('.tooltipped').tooltip();
   $('.slider').slider();
+  $('.datepicker').datepicker();
   $(".button-collapse").sideNav({
   	edge: 'right'
   });  
